@@ -1,22 +1,17 @@
 ﻿using StringAndListOperations.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StringAndListOperations
 {
 	public class Counters : ICounters
-	{ }
+	{
 
 		public int WordCount(string text)
 		{
 
-		string[] words = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-		int count = words.Length;
+			string[] words = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+			int count = words.Length;
 
-		return count;
+			return count;
 		}
 
 		public int LetterCount(string text)
@@ -25,58 +20,59 @@ namespace StringAndListOperations
 			string[] words = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 			foreach (string word in words)
 			{
-			int letterCount = word.Length;
-			totalLetterCount += letterCount; //totalLetterCount = totalLetterCount + letterCount;
+				int letterCount = word.Length;
+				totalLetterCount += letterCount; //totalLetterCount = totalLetterCount + letterCount;
 
-		}
+			}
 			return totalLetterCount;
 		}
 
 		public int SpacesCount(string text)
 		{
-		int SpaceCount = 0;
+			int spaceCount = 0;
 
-		foreach (char c in text)
-		{
-			if (c == ' ')
+			foreach (char c in text)
 			{
-				SpaceCount++;
-			}
+				if (c == ' ')
+				{
+					spaceCount++;
+				}
 
-		}
-		return SpaceCount;
+			}
+			return spaceCount;
 		}
 
 		public int FullstopCount(string text)
 		{
-		int FullstopCount = 0;
-		
-		foreach (char c in text)
-		{
-			if (c == '.') 
+			int fullstopCount = 0;
+
+			foreach (char c in text)
 			{
-			FullstopCount++;
+				if (c == '.')
+				{
+					fullstopCount++;
+				}
 			}
-		}
-		return FullstopCount;
+			return fullstopCount;
 		}
 
 		public int QuestionMarkCount(string text)
 		{
-		int QuestionMarkCount = 0;
+			int questionMarkCount = 0;
 
-		foreach (char c in text)
-		{
-			if (c == '?')
+			foreach (char c in text)
 			{
-				QuestionMarkCount++;
+				if (c == '?')
+				{
+					questionMarkCount++;
+				}
 			}
-		}
+			return questionMarkCount;
 		}
 
 		public int LineCount(string text)
 		{
-			string[] lines = text.Split(new [] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+			string[] lines = text.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
 			int lineCount = lines.Length;
 
 			return lineCount;
@@ -84,4 +80,4 @@ namespace StringAndListOperations
 
 	}
 
-
+}

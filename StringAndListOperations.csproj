@@ -8,4 +8,8 @@
     <BaseOutputPath>C:\Users\Filip.Gjurcheski\Desktop\.NET Academy\StringAndListOperations\`EmailTemplates</BaseOutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="EmailTemplates\NewFiles\" />
+  </ItemGroup>
+
 </Project>

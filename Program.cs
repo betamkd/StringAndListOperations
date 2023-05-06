@@ -3,6 +3,7 @@ using StringAndListOperations.Interfaces;
 
 GenerateEmailTemplates generateMarketingEmail = new GenerateEmailTemplates();
 ReadFromTxtFile readFromTxtFile = new ReadFromTxtFile();
+WriteToTxtFile writeToTxtFile = new	WriteToTxtFile();
 //Counters counters = new Counters();
 ICounters counters = new Counters();
 
@@ -246,45 +247,168 @@ ICounters counters = new Counters();
 //int LastIndex = firststring.LastIndexOf(character);
 
 
-Console.ForegroundColor = ConsoleColor.Cyan;
-string emailTemplate = readFromTxtFile.ReadFromFile();
-Console.WriteLine(emailTemplate);
-Console.ResetColor();
-Console.WriteLine("*******************************\n");
-int wordCount = counters.WordCount(emailTemplate);
-int letterCount = counters.LetterCount(emailTemplate);
-int lineCount = counters.LineCount(emailTemplate);
-int FullstopCount = counters.FullstopCount(emailTemplate);
-int spaceCount = counters.SpacesCount(emailTemplate);
-int questionsMarkCount = counters.QuestionMarkCount(emailTemplate);
+//Console.ForegroundColor = ConsoleColor.Cyan;
+//string emailTemplate = readFromTxtFile.ReadFromFile();
+//Console.WriteLine(emailTemplate);
+//Console.ResetColor();
+//Console.WriteLine("*******************************\n");
+//int wordCount = counters.WordCount(emailTemplate);
+//int letterCount = counters.LetterCount(emailTemplate);
+//int lineCount = counters.LineCount(emailTemplate);
+//int fullstopCount = counters.FullstopCount(emailTemplate);
+//int spaceCount = counters.SpacesCount(emailTemplate);
+//int questionsMarkCount = counters.QuestionMarkCount(emailTemplate);
 
-Console.ForegroundColor = ConsoleColor.Magenta;
-Console.WriteLine("Word count: " + wordCount);
-Console.WriteLine("*******************************\n");
-Console.ResetColor();
+//Console.ForegroundColor = ConsoleColor.Magenta;
+//Console.WriteLine("Word count: " + wordCount);
+//Console.WriteLine("*******************************\n");
+//Console.ResetColor();
 
-Console.ForegroundColor = ConsoleColor.Yellow;
-Console.WriteLine("Letter count: " + letterCount);
-Console.WriteLine("*******************************\n");
-Console.ResetColor();
+//Console.ForegroundColor = ConsoleColor.Yellow;
+//Console.WriteLine("Letter count: " + letterCount);
+//Console.WriteLine("*******************************\n");
+//Console.ResetColor();
 
-Console.ForegroundColor = ConsoleColor.Blue;
-Console.WriteLine("Line count: " + lineCount);
-Console.WriteLine("*******************************\n");
-Console.ResetColor();
+//Console.ForegroundColor = ConsoleColor.Blue;
+//Console.WriteLine("Line count: " + lineCount);
+//Console.WriteLine("*******************************\n");
+//Console.ResetColor();
 
-Console.ForegroundColor = ConsoleColor.DarkRed;
-Console.WriteLine("Fullstop count: " + FullstopCount);
-Console.WriteLine("*******************************\n");
-Console.ResetColor();
+//Console.ForegroundColor = ConsoleColor.DarkRed;
+//Console.WriteLine("Fullstop count: " + fullstopCount);
+//Console.WriteLine("*******************************\n");
+//Console.ResetColor();
 
-Console.ForegroundColor = ConsoleColor.Magenta;
-Console.WriteLine("Space count: " + spaceCount);
-Console.WriteLine("*******************************\n");
-Console.ResetColor();
+//Console.ForegroundColor = ConsoleColor.Magenta;
+//Console.WriteLine("Space count: " + spaceCount);
+//Console.WriteLine("*******************************\n");
+//Console.ResetColor();
 
-Console.ForegroundColor = ConsoleColor.Cyan;
-Console.WriteLine("Questionmark count: " + questionMarkCount);
-Console.WriteLine("*******************************\n");
-Console.ResetColor();
+//Console.ForegroundColor = ConsoleColor.Cyan;
+//Console.WriteLine("Questionmark count: " + questionsMarkCount);
+//Console.WriteLine("*******************************\n");
+//Console.ResetColor();
 
+
+
+
+
+
+
+
+
+// ------------------------------LIST METHOD----------------------------------------------
+
+
+// Add element to list
+List<int> intList = new List<int>();
+intList.Add(1);
+intList.Add(2);
+intList.Add(3);
+intList.Add(4);
+intList.Add(5);
+
+//// Add multiple elements to list
+List<int> intList2 = new List<int>();
+intList2.AddRange(new int[] { 1, 2, 3 });
+intList.AddRange(new int[] { 1, 2, 3 });
+
+// Remove elements from a list by index
+//intList.RemoveAt(5);
+
+// Remove element from a list by value
+//intList.Remove(1);
+
+//Remove all elements that match a condition by element
+//intList.RemoveAll(x => x == 1);
+
+
+//Get the number of elements in a list
+//List<int> intlist3 = new List<int> {1, 2, 3};
+//int numberOfElements = intlist3.Count;
+
+//if(numberOfElements == 0)
+//{
+//	Console.WriteLine("Listata e prazna");
+//}
+//else if (numberOfElements > 0)
+//{
+//	Console.WriteLine("Listata e polna");
+//}
+
+// Get the index of an element in list
+//List<int> intList4 = new List<int> { 1, 2, 3 };
+//int index = intList4.IndexOf(2);
+
+// How to sort a list in ascending order.
+//List<int> intList5 = new List<int> { 7, 1, 2, 9, 3, 4, 5, 6, 8 };
+//intList5.OrderByDescending (x => x);
+//intList5.Sort();
+
+
+
+// How to sort a list in descending order.
+//List<int> intList6 = new List<int> { 7, 1, 2, 9, 3, 4, 5, 6, 8 };
+//intList6.Sort((a, b) => b.CompareTo(a));
+
+//List<int> _intListTemp = new List<int>();
+
+//foreach (var item in intList6)
+//{
+//	int _temp = 0;
+
+//	if (item > _temp)
+//	{
+//		_temp = item;
+//		_intListTemp.Add(item);
+//	}
+//}
+
+//_intListTemp = intList;
+
+
+
+//How to check if a list contains a specific element
+//List<int> intList7 = new List<int> { 7, 1, 2, 9, 3, 4, 5, 6, 8 };
+//List<string> stringList7 = new List<string> { "John", "Doe", "Asssaaaa"};
+//bool containsElement = intList7.Contains(3);
+//bool containsElement2 = stringList7.Contains("Bla");
+
+//int getTheIndex = intList7.IndexOf(3);
+
+//if (containsElement2)
+//{
+//	int getTheIndex2 = stringList7.IndexOf("Bla");
+//	string getItemFromList = stringList7[getTheIndex2];
+//}
+
+//int getTheIndex = intList7.IndexOf(3);
+
+
+
+//How to clear all elements from a list
+//List<int> intList8 = new List<int> { 7, 1, 2, 9, 3, 4, 5, 6, 8 };
+//intList8.Clear();
+
+
+//How to create a new list that contains only even numbers from an existing list?
+//List<int> intList8 = new List<int> { 7, 1, 2, 9, 3, 4, 5, 6, 8 };
+//List<int> evenNumbers = intList8.FindAll(x => x % 2 == 0);
+
+//How to concatenate  two lists into a new list?
+//List<int> intList9 = new List<int> { 7, 1, 2, 9, 3, 4, 5, 6, 8 };
+//List<int> intList10 = new List<int> { 11, 10, 12, 16 };
+//List<int> concatenatedList = intList9.Concat(intList10).ToList();
+
+
+//How to get the first element in a list?
+//How to get the last element in a list?
+//List<int> intList10 = new List<int> { 7, 1, 2, 9, 3, 4, 5, 6, 8 };
+//int firstElement = intList10.First();
+//int lastElement = intList10.Last();
+
+
+
+Console.WriteLine("");
+
+writeToTxtFile.WriteToFile();

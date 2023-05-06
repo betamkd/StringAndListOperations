@@ -12,14 +12,14 @@ namespace StringAndListOperations.Interfaces
 
 		int LetterCount(string text);
 
-		int LineCount(string text);
-
 		int SpacesCount(string text);
 
 
 		int FullstopCount(string text);
 
 		int QuestionMarkCount(string text);
+
+		int LineCount(string text);
 
 	}
 }

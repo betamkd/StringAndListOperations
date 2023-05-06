@@ -41,7 +41,7 @@ namespace StringAndListOperations
 			[Company]";
 
 
-			string newTemplate;
+			string newTemplate = "";
 
 			foreach (string name in names)
 			{
@@ -57,7 +57,7 @@ namespace StringAndListOperations
 				Console.WriteLine("****************************************");
 				Console.WriteLine("\n");
 			}
-			return "";
+			return newTemplate;
 		}
 	}
 }
